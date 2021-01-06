@@ -47,7 +47,7 @@
     </div>
   </div>
 </nav>
-<---optional JavaScript; choose one of the two! -->
+
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
@@ -61,7 +61,8 @@
   <strong>Hey there!!</strong> You should check my first website.
   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
-<form action='/analyze/' method='get'>{%csrf_token%}
+<form action='/analyze/' method='get'>
+  {%csrf_token%}
 <div class="container">
   <label for="exampleFormControlTextarea1" class="form-label">Enter your text here:</label>
   <textarea class="form-control" name='text' id="exampleFormControlTextarea1" rows="5"></textarea>
