@@ -20,7 +20,7 @@ def analyze(request):
     removepunc = request.POST.get('removepunc', 'off')
     if removepunc == "on":
         print(removepunc)
-        # print(text)
+        
         punc = ["!", '"', '#', '$', '%', '&', "'", '(', ')', '*', '+', ' -', '.', '/', ':', ';', '<', '>', '=', '?',
                 '@',
                 '~', '_']
@@ -29,7 +29,7 @@ def analyze(request):
         for items in punc:
             while items in a:
                 a.remove(items)
-        # print(a)
+        
         analyzed = ""
         for i in a:
             analyzed = analyzed + i
@@ -39,7 +39,7 @@ def analyze(request):
     spaceremover = request.POST.get('spaceremover', 'off')
 
     if spaceremover == "on":
-        print(spaceremover)
+        
         home_page_input_text = text
         i = 1
         while i <= 5:
@@ -50,7 +50,7 @@ def analyze(request):
     # -------------------------------------------------------UPPER CASE----------------------------------------
     fullcaps = request.POST.get('fullcaps', 'off')
     if fullcaps == "on":
-        print(fullcaps)
+        
         home_page_input_text = text
         analyzed = ""
         for i in home_page_input_text:
@@ -60,7 +60,7 @@ def analyze(request):
     # -------------------------------------------------Remove New Line----------------------------------------
     newlineremover = request.POST.get('newlineremover', 'off')
     if newlineremover == "on":
-        print(newlineremover)
+        
         home_page_input_text = text
         analyzed = ""
         for i in home_page_input_text:
@@ -71,7 +71,7 @@ def analyze(request):
     # -------------------------------------------------COUNTING CHARACTERS----------------------------------------
     charcount = request.POST.get('charcount', 'off')
     if charcount == 'on':
-        print(charcount)
+       
         home_page_input_text = text
         for i, char in enumerate(home_page_input_text):
             pass
