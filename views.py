@@ -19,7 +19,7 @@ def analyze(request):
     # ------------------------------------------------REMOVE PUNC-------------------------------------------
     removepunc = request.POST.get('removepunc', 'off')
     if removepunc == "on":
-        print(removepunc)
+        
         
         punc = ["!", '"', '#', '$', '%', '&', "'", '(', ')', '*', '+', ' -', '.', '/', ':', ';', '<', '>', '=', '?',
                 '@',
