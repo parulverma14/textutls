@@ -14,7 +14,7 @@ def contact(request):
     #parul={"name":"Parul","surname":"Verma"}
     return render (request,'contact.html',)
 
-def analyze(request):
+def post(request):
     text = request.POST.get('text', 'default')
     # ------------------------------------------------REMOVE PUNC-------------------------------------------
     removepunc = request.POST.get('removepunc', 'off')
