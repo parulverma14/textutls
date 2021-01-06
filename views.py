@@ -15,9 +15,9 @@ def contact(request):
     return render (request,'contact.html',)
 
 def analyze(request):
-    text = request.GET.get('text', 'default')
+    text = request.POST.get('text', 'default')
     # ------------------------------------------------REMOVE PUNC-------------------------------------------
-    removepunc = request.GET.get('removepunc', 'off')
+    removepunc = request.POST.get('removepunc', 'off')
     if removepunc == "on":
         print(removepunc)
         # print(text)
@@ -36,7 +36,7 @@ def analyze(request):
             text=analyzed
         dict = {'purpose': 'After Removing Punctuations', 'Analysed_Text': analyzed}
     # ------------------------------------------------------SPACE REMOVER-------------------------------------
-    spaceremover = request.GET.get('spaceremover', 'off')
+    spaceremover = request.POST.get('spaceremover', 'off')
 
     if spaceremover == "on":
         print(spaceremover)
@@ -48,7 +48,7 @@ def analyze(request):
             text=home_page_input_text
         dict = {'purpose': 'After Removing Spaces', 'Analysed_Text': home_page_input_text}
     # -------------------------------------------------------UPPER CASE----------------------------------------
-    fullcaps = request.GET.get('fullcaps', 'off')
+    fullcaps = request.POST.get('fullcaps', 'off')
     if fullcaps == "on":
         print(fullcaps)
         home_page_input_text = text
@@ -58,7 +58,7 @@ def analyze(request):
             text=analyzed
         dict = {'purpose': 'After Full Capitalization', 'Analysed_Text': analyzed}
     # -------------------------------------------------Remove New Line----------------------------------------
-    newlineremover = request.GET.get('newlineremover', 'off')
+    newlineremover = request.POST.get('newlineremover', 'off')
     if newlineremover == "on":
         print(newlineremover)
         home_page_input_text = text
@@ -69,7 +69,7 @@ def analyze(request):
                 text=analyzed
         dict = {'purpose': 'After Removing New Line', 'Analysed_Text': analyzed}
     # -------------------------------------------------COUNTING CHARACTERS----------------------------------------
-    charcount = request.GET.get('charcount', 'off')
+    charcount = request.POST.get('charcount', 'off')
     if charcount == 'on':
         print(charcount)
         home_page_input_text = text
